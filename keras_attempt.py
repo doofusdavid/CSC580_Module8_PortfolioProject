@@ -112,13 +112,13 @@ def display_images(epoch):
 # Building and compiling the discriminator
 
 discriminator = build_discriminator()
-discriminator.trainable = False
 
 discriminator.compile(loss='binary_crossentropy',
                       optimizer=Adam(0.0002, 0.5),
                       metrics=['accuracy'])
 
 #Making the discriminator untrainable
+discriminator.trainable = False
 
 #so that the generator can learn from fixed gradient
 
