@@ -1,6 +1,7 @@
 import numpy as np
-
+import time
 import matplotlib.pyplot as plt
+import logging
 
 import keras
 from keras.layers import Input, Dense, Reshape, Flatten, Dropout
@@ -10,7 +11,10 @@ from keras.layers.convolutional import UpSampling2D, Conv2D
 from keras.models import Sequential, Model
 from keras.optimizers import Adam, SGD
 
+logging.basicConfig(filename="keras.log", level=logging.DEBUG)
 #Loading the CIFAR10 data
+start_time = time.time()
+logging.info(f"Start Time: {start_time}")
 
 (X, y), (_, _) = keras.datasets.cifar10.load_data()
 
@@ -143,7 +147,7 @@ combined_network = Model(z, valid)
 combined_network.compile(loss='binary_crossentropy',
                          optimizer=Adam(0.0002, 0.5))
 
-num_epochs = 15001
+num_epochs = 30001
 batch_size = 32
 display_interval = 2500
 losses = []
@@ -197,5 +201,12 @@ for epoch in range(num_epochs):
     #Tracking the progress
     print(f"epoch: {epoch}")
     if epoch % display_interval == 0:
-
+        logging.info(
+            f"Epoch: {epoch} - Execution time: {time.time()-start_time} seconds"
+        )
+        print(f"Execution time: {time.time()-start_time} seconds")
         display_images(epoch)
+
+stop_time = time.time()
+logging.info(f"Execution time: {stop_time-start_time} seconds")
+print(f"Execution time: {stop_time-start_time} seconds")

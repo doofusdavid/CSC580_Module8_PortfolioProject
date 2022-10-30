@@ -1,0 +1,23 @@
+INFO:root:Start Time: 1667154226.4475548
+WARNING:tensorflow:From /home/david/anaconda3/envs/tf1/lib/python3.7/site-packages/tensorflow_core/python/ops/resource_variable_ops.py:1630: calling BaseResourceVariable.__init__ (from tensorflow.python.ops.resource_variable_ops) with constraint is deprecated and will be removed in a future version.
+Instructions for updating:
+If using Keras pass *_constraint arguments to layers.
+WARNING:tensorflow:From /home/david/anaconda3/envs/tf1/lib/python3.7/site-packages/tensorflow_core/python/ops/nn_impl.py:183: where (from tensorflow.python.ops.array_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.where in 2.0, which has the same broadcast rule as np.where
+WARNING:tensorflow:From /home/david/anaconda3/envs/tf1/lib/python3.7/site-packages/keras/backend/tensorflow_backend.py:422: The name tf.global_variables is deprecated. Please use tf.compat.v1.global_variables instead.
+
+INFO:root:Epoch: 0 - Execution time: 11.796842336654663 seconds
+INFO:root:Epoch: 2500 - Execution time: 167.94546747207642 seconds
+INFO:root:Epoch: 5000 - Execution time: 327.6453685760498 seconds
+INFO:root:Epoch: 7500 - Execution time: 488.6963303089142 seconds
+INFO:root:Epoch: 10000 - Execution time: 646.4962327480316 seconds
+INFO:root:Epoch: 12500 - Execution time: 807.5216906070709 seconds
+INFO:root:Epoch: 15000 - Execution time: 970.7602753639221 seconds
+INFO:root:Epoch: 17500 - Execution time: 1130.7826788425446 seconds
+INFO:root:Epoch: 20000 - Execution time: 1292.7829988002777 seconds
+INFO:root:Epoch: 22500 - Execution time: 1453.5656023025513 seconds
+INFO:root:Epoch: 25000 - Execution time: 1612.211177110672 seconds
+INFO:root:Epoch: 27500 - Execution time: 1773.4912798404694 seconds
+INFO:root:Epoch: 30000 - Execution time: 1933.7117457389832 seconds
+INFO:root:Execution time: 1933.944367647171 seconds
